@@ -38,7 +38,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: ./project
+          context: "{{defaultContext}}:project"
           file: ./project/techtrends/Dockerfile
           platforms: linux/amd64
           push: true
